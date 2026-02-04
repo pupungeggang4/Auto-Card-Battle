@@ -42,6 +42,6 @@
 
 .DS_Store
 *.swp
-*.png~
+*.*~
 
 release/
