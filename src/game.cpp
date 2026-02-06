@@ -14,14 +14,15 @@ void Game::run() {
 
 void Game::loop() {
     while (window.isOpen()) {
-        while (const std::optional event = window.pollEvent()) {
-            if (event->is<sf::Event::Closed>())
-                window.close();
-        }
+        handleInput();
         window.clear(sf::Color::White);
-        rText.setFillColor(sf::Color::Black);
-        rText.setPosition({20.f, 20.f});
-        window.draw(rText);
         window.display();
+    }
+}
+
+void Game::handleInput() {
+    while (const std::optional event = window.pollEvent()) {
+        if (event->is<sf::Event::Closed>())
+            window.close();
     }
 }

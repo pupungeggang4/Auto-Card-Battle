@@ -11,4 +11,5 @@ class Game : public std::enable_shared_from_this<Game> {
         Game();
         void run();
         void loop();
+        void handleInput();
 };
