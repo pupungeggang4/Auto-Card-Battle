@@ -1,31 +1,34 @@
 #include <game.hpp>
 #include <asset.hpp>
+#include <scene.hpp>
 
 Game::Game() {
     sf::err().rdbuf(NULL);
     sf::VideoMode videoMode = sf::VideoMode::getDesktopMode();
     if (videoMode.size.x > 2560) {
-        width = 2560; height = 1440;
+        width = 1600; height = 1200;
     } else if (videoMode.size.x > 2000) {
-        width = 1920; height = 1080;
+        width = 1200; height = 900;
     } else {
-        width = 1280; height = 720;
+        width = 800; height = 600;
     }
     window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle");
+    UIView = sf::View({400, 300}, {800, 600});
+    window.setView(UIView);
 }
 
 void Game::run() {
     self = shared_from_this();
     Font::neodgm->setSmooth(false);
     rText.setFont(*Font::neodgm);
+    scene = make_shared<SceneTitle>();
     loop();
 }
 
 void Game::loop() {
     while (window.isOpen()) {
         handleInput();
-        window.clear(sf::Color::White);
-        window.display();
+        scene->loop(self);
     }
 }
 
@@ -33,5 +36,13 @@ void Game::handleInput() {
     while (const std::optional event = window.pollEvent()) {
         if (event->is<sf::Event::Closed>())
             window.close();
+        if (const auto *mouse = event->getIf<sf::Event::MouseButtonPressed>()) {
+            sf::Vector2f pos = (sf::Vector2f)mouse->position;
+            int button = int(mouse->button);
+        }
+        if (const auto *mouse = event->getIf<sf::Event::MouseButtonReleased>()) {
+            sf::Vector2f pos = (sf::Vector2f)mouse->position;
+            int button = int(mouse->button);
+        }
     }
 }
