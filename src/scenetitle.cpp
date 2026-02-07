@@ -27,7 +27,13 @@ void SceneTitle::render(shared_ptr<Game> game) {
 }
 
 void SceneTitle::mouseUp(shared_ptr<Game> game, sf::Vector2f pos, int button) {
-
+    if (button == 0) {
+        if (buttonStart.getGlobalBounds().contains(pos)) {
+            
+        } else if (buttonExit.getGlobalBounds().contains(pos)) {
+            game->window.close();
+        }
+    }
 }
 
 void SceneTitle::keyDown(shared_ptr<Game> game, int key) {

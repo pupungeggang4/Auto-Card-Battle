@@ -3,7 +3,6 @@
 #include <asset.hpp>
 
 int main() {
-    std::cout << 1 << std::endl;
     shared_ptr<Game> game = make_shared<Game>();
     game->run();
     Font::neodgm.reset();

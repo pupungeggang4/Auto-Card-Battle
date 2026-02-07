@@ -41,7 +41,6 @@ void Game::handleInput() {
             pos.x *= 800.f / (float)width;
             pos.y *= 600.f / (float)height;
             int button = int(mouse->button);
-            std::cout << pos.x << ' ' << pos.y << ' ' << button << std::endl;
             scene->mouseUp(self, pos, button);
         }
     }
