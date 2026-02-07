@@ -36,13 +36,13 @@ void Game::handleInput() {
     while (const std::optional event = window.pollEvent()) {
         if (event->is<sf::Event::Closed>())
             window.close();
-        if (const auto *mouse = event->getIf<sf::Event::MouseButtonPressed>()) {
-            sf::Vector2f pos = (sf::Vector2f)mouse->position;
-            int button = int(mouse->button);
-        }
         if (const auto *mouse = event->getIf<sf::Event::MouseButtonReleased>()) {
             sf::Vector2f pos = (sf::Vector2f)mouse->position;
+            pos.x *= 800.f / (float)width;
+            pos.y *= 600.f / (float)height;
             int button = int(mouse->button);
+            std::cout << pos.x << ' ' << pos.y << ' ' << button << std::endl;
+            scene->mouseUp(self, pos, button);
         }
     }
 }

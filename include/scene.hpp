@@ -18,6 +18,7 @@ class SceneTitle : public Scene {
         sf::Text textTitle = sf::Text(currentFont, "Auto Card Battle", 32);
         sf::Text textStart = sf::Text(currentFont, "Start Game", 32);
         sf::Text textExit = sf::Text(currentFont, "Exit", 32);
+        sf::RectangleShape buttonStart, buttonExit;
         SceneTitle();
         void loop(shared_ptr<Game>) override;
         void render(shared_ptr<Game>) override;
