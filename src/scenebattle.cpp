@@ -5,7 +5,7 @@ SceneBattle::SceneBattle() {
 
 }
 
-void SceneBattle::loop(shared_ptr<Game> game) {
+void SceneBattle::update(shared_ptr<Game> game) {
 
 }
 

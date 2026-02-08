@@ -5,7 +5,7 @@ SceneField::SceneField() {
 
 }
 
-void SceneField::loop(shared_ptr<Game> game) {
+void SceneField::update(shared_ptr<Game> game) {
 
 }
 

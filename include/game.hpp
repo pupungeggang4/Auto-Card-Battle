@@ -10,6 +10,7 @@ class Game : public std::enable_shared_from_this<Game> {
         sf::Font currentFont;
         sf::Text rText = sf::Text(currentFont, "Hello", 32);
         unsigned int width, height;
+        sf::Clock clock; float frameCurrent, framePrevious, delta;
 
         shared_ptr<Scene> scene;
         std::unordered_map<std::string, bool> keyPressed = {

@@ -7,6 +7,6 @@ class Player {
         sf::FloatRect rect;
         sf::Texture texture;
         sf::Sprite sprite = sf::Sprite(texture);
-        std::vector<Card> deck;
+        std::vector<shared_ptr<Card>> deck;
         Player();
 };

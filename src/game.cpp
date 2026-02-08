@@ -15,9 +15,14 @@ Game::Game() {
     window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle");
     UIView = sf::View({400, 300}, {800, 600});
     window.setView(UIView);
+    window.setVerticalSyncEnabled(true);
+    clock = sf::Clock();
 }
 
 void Game::run() {
+    framePrevious = 0;
+    frameCurrent = 0;
+    delta = 0;
     self = shared_from_this();
     Font::neodgm->setSmooth(false);
     rText.setFont(*Font::neodgm);
@@ -27,8 +32,15 @@ void Game::run() {
 
 void Game::loop() {
     while (window.isOpen()) {
+        frameCurrent = (float)clock.getElapsedTime().asSeconds();
+        delta = frameCurrent - framePrevious;
+        framePrevious = frameCurrent;
+
         handleInput();
-        scene->loop(self);
+        scene->update(self);
+        window.clear(sf::Color::White);
+        scene->render(self);
+        window.display();
     }
 }
 

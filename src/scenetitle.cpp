@@ -2,6 +2,7 @@
 #include <asset.hpp>
 #include <render.hpp>
 #include <ui.hpp>
+#include <util.hpp>
 #include <game.hpp>
 
 SceneTitle::SceneTitle() {
@@ -12,24 +13,22 @@ SceneTitle::SceneTitle() {
     Render::setRect(buttonExit, sf::Color::Cyan, UI::UITitle["button_exit"]);
 }
 
-void SceneTitle::loop(shared_ptr<Game> game) {
-    render(game);
+void SceneTitle::update(shared_ptr<Game> game) {
+
 }
 
 void SceneTitle::render(shared_ptr<Game> game) {
-    game->window.clear(sf::Color::White);
     game->window.draw(textTitle);
     game->window.draw(buttonStart);
     game->window.draw(textStart);
     game->window.draw(buttonExit);
     game->window.draw(textExit);
-    game->window.display();
 }
 
 void SceneTitle::mouseUp(shared_ptr<Game> game, sf::Vector2f pos, int button) {
     if (button == 0) {
         if (buttonStart.getGlobalBounds().contains(pos)) {
-            
+            Util::changeScene(game, "field");
         } else if (buttonExit.getGlobalBounds().contains(pos)) {
             game->window.close();
         }
