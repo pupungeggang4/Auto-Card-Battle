@@ -1,7 +1,7 @@
 #pragma once
 #include <includes.hpp>
 
-typedef shared_ptr<std::unordered_map<std::string, sf::Texture>> texptr;
+typedef std::unordered_map<std::string, sf::Texture> texmap;
 
 class Font {
     public:
@@ -10,5 +10,5 @@ class Font {
 
 class Img {
     public:
-        static shared_ptr<texptr> texture;
+        static shared_ptr<texmap> texture;
 };

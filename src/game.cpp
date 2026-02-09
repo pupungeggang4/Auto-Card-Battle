@@ -1,6 +1,7 @@
 #include <game.hpp>
 #include <asset.hpp>
 #include <scene.hpp>
+#include <field.hpp>
 
 Game::Game() {
     sf::err().rdbuf(NULL);
@@ -12,21 +13,27 @@ Game::Game() {
     } else {
         width = 800; height = 600;
     }
-    window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle");
+    sf::ContextSettings settings;
+    settings.antiAliasingLevel = 0;
+    window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle", sf::State::Windowed, settings);
     UIView = sf::View({400, 300}, {800, 600});
-    window.setView(UIView);
     window.setVerticalSyncEnabled(true);
     clock = sf::Clock();
 }
 
 void Game::run() {
+    self = shared_from_this();
     framePrevious = 0;
     frameCurrent = 0;
     delta = 0;
-    self = shared_from_this();
+
     Font::neodgm->setSmooth(false);
     rText.setFont(*Font::neodgm);
+    Img::texture->emplace("sprite_tile", sf::Texture("asset/sprite/sprite_tile.png"));
+    Img::texture->at("sprite_tile").setSmooth(false);
+
     scene = make_shared<SceneTitle>();
+    field = make_shared<Field>();
     loop();
 }
 

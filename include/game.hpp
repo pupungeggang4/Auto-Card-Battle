@@ -2,6 +2,7 @@
 #include <includes.hpp>
 
 class Scene;
+class Field;
 
 class Game : public std::enable_shared_from_this<Game> {
     public:
@@ -18,6 +19,8 @@ class Game : public std::enable_shared_from_this<Game> {
         };
         std::string state = "";
         bool menu = false;
+
+        shared_ptr<Field> field;
 
         Game();
         void run();

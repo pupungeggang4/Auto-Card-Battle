@@ -18,6 +18,7 @@ void SceneTitle::update(shared_ptr<Game> game) {
 }
 
 void SceneTitle::render(shared_ptr<Game> game) {
+    game->window.setView(game->UIView);
     game->window.draw(textTitle);
     game->window.draw(buttonStart);
     game->window.draw(textStart);
