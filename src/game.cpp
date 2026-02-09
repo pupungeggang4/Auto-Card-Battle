@@ -13,9 +13,7 @@ Game::Game() {
     } else {
         width = 800; height = 600;
     }
-    sf::ContextSettings settings;
-    settings.antiAliasingLevel = 0;
-    window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle", sf::State::Windowed, settings);
+    window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle");
     UIView = sf::View({400, 300}, {800, 600});
     window.setVerticalSyncEnabled(true);
     clock = sf::Clock();
