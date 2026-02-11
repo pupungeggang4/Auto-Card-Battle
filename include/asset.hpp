@@ -11,4 +11,5 @@ class Font {
 class Img {
     public:
         static shared_ptr<texmap> texture;
+        static void loadImage();
 };

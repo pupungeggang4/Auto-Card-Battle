@@ -8,7 +8,7 @@ SceneField::SceneField() {
 }
 
 void SceneField::update(shared_ptr<Game> game) {
-
+    game->field->handleTick(game);
 }
 
 void SceneField::render(shared_ptr<Game> game) {

@@ -27,8 +27,7 @@ void Game::run() {
 
     Font::neodgm->setSmooth(false);
     rText.setFont(*Font::neodgm);
-    Img::texture->emplace("sprite_tile", sf::Texture("asset/sprite/sprite_tile.png"));
-    Img::texture->at("sprite_tile").setSmooth(false);
+    Img::loadImage();
 
     scene = make_shared<SceneTitle>();
     field = make_shared<Field>();
@@ -51,14 +50,55 @@ void Game::loop() {
 
 void Game::handleInput() {
     while (const std::optional event = window.pollEvent()) {
-        if (event->is<sf::Event::Closed>())
+        if (event->is<sf::Event::Closed>()) {
             window.close();
+        }
+        if (const auto* resized = event->getIf<sf::Event::Resized>()) {
+            if (height != resized->size.y) {
+                width = resized->size.y * 4 / 3;
+                height = resized->size.y;
+                window.setSize({width, height});
+
+            } else {
+                width = resized->size.x;
+                height = resized->size.x * 3 / 4;
+                window.setSize({width, height});
+            }
+        }
         if (const auto *mouse = event->getIf<sf::Event::MouseButtonReleased>()) {
             sf::Vector2f pos = (sf::Vector2f)mouse->position;
             pos.x *= 800.f / (float)width;
             pos.y *= 600.f / (float)height;
             int button = int(mouse->button);
             scene->mouseUp(self, pos, button);
+        }
+        if (const auto *keyDown = event->getIf<sf::Event::KeyPressed>()) {
+            if (keyDown->scancode == sf::Keyboard::Scancode::Up) {
+                keyPressed["up"] = true;
+            }
+            if (keyDown->scancode == sf::Keyboard::Scancode::Down) {
+                keyPressed["down"] = true;
+            }
+            if (keyDown->scancode == sf::Keyboard::Scancode::Left) {
+                keyPressed["left"] = true;
+            }
+            if (keyDown->scancode == sf::Keyboard::Scancode::Right) {
+                keyPressed["right"] = true;
+            }
+        }
+        if (const auto *keyUp = event->getIf<sf::Event::KeyReleased>()) {
+            if (keyUp->scancode == sf::Keyboard::Scancode::Up) {
+                keyPressed["up"] = false;
+            }
+            if (keyUp->scancode == sf::Keyboard::Scancode::Down) {
+                keyPressed["down"] = false;
+            }
+            if (keyUp->scancode == sf::Keyboard::Scancode::Left) {
+                keyPressed["left"] = false;
+            }
+            if (keyUp->scancode == sf::Keyboard::Scancode::Right) {
+                keyPressed["right"] = false;
+            }
         }
     }
 }
