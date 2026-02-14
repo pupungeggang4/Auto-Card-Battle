@@ -6,4 +6,5 @@ shared_ptr<texmap> Img::texture = make_shared<texmap>();
 void Img::loadImage() {
     texture->emplace("sprite_tile", sf::Texture("asset/sprite/sprite_tile.png"));
     texture->emplace("sprite_player", sf::Texture("asset/sprite/sprite_player.png"));
+    texture->emplace("sprite_entity", sf::Texture("asset/sprite/sprite_entity.png"));
 }

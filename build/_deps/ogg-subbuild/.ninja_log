@@ -1,0 +1,21 @@
+# ninja log v7
+2	96	7927864904715465	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	26c8967729aa6eff
+2	96	7927864904715465	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	26c8967729aa6eff
+96	2553	7927864929296302	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	91f4970d6a23421b
+96	2553	7927864929296302	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	91f4970d6a23421b
+2553	2737	7927864929367288	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	790953c66db677be
+2553	2737	7927864929367288	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	790953c66db677be
+2737	2830	7927864932060742	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	beadb884ed7a1cbe
+2737	2830	7927864932060742	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	beadb884ed7a1cbe
+2830	2917	7927864932933873	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	136e6fdfb983ce17
+2830	2917	7927864932933873	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	136e6fdfb983ce17
+2918	3005	7927864933821608	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	4695ad62b0ea5131
+2918	3005	7927864933821608	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	4695ad62b0ea5131
+3006	3094	7927864934682127	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	477c6bb233db80ee
+3006	3094	7927864934682127	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	477c6bb233db80ee
+3094	3181	7927864935574688	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	f0e712dcb3c6ab20
+3094	3181	7927864935574688	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	f0e712dcb3c6ab20
+3181	3305	7927864936815829	CMakeFiles/ogg-populate-complete	6caff2cf2f747103
+3181	3305	7927864936815829	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	6caff2cf2f747103
+3181	3305	7927864936815829	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate-complete	6caff2cf2f747103
+3181	3305	7927864936815829	C:/Users/kyong/workspace/cpp/card/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	6caff2cf2f747103

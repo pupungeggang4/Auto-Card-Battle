@@ -1,0 +1,21 @@
+# ninja log v7
+2	103	7927864753642899	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	7a0c71435255d93b
+2	103	7927864753642899	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	7a0c71435255d93b
+106	13970	7927864892335225	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	a09fe703befc25ff
+106	13970	7927864892335225	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	a09fe703befc25ff
+13972	14155	7927864892435685	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	3ecfaf3123b01530
+13972	14155	7927864892435685	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	3ecfaf3123b01530
+14155	14249	7927864895095483	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	c22ccb8d6c428cae
+14155	14249	7927864895095483	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	c22ccb8d6c428cae
+14249	14337	7927864895994124	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	16d459e71f444760
+14249	14337	7927864895994124	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	16d459e71f444760
+14337	14424	7927864896828877	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	daef72dd26103d1f
+14337	14424	7927864896828877	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	daef72dd26103d1f
+14425	14519	7927864897814675	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	7c809b69ee6bad69
+14425	14519	7927864897814675	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	7c809b69ee6bad69
+14519	14606	7927864898675039	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	d0cd9bac8f962123
+14519	14606	7927864898675039	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	d0cd9bac8f962123
+14606	14732	7927864899957381	CMakeFiles/freetype-populate-complete	aed844f8e4156e84
+14606	14732	7927864899957381	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	aed844f8e4156e84
+14606	14732	7927864899957381	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/CMakeFiles/freetype-populate-complete	aed844f8e4156e84
+14606	14732	7927864899957381	C:/Users/kyong/workspace/cpp/card/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	aed844f8e4156e84
