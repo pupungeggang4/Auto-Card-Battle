@@ -44,5 +44,6 @@
 *.swp
 *.*~
 
+build/
 release/
 lib/

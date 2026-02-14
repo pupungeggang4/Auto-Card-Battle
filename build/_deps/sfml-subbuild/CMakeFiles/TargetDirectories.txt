@@ -1,3 +1,0 @@
-C:/Users/kyong/workspace/cpp/card/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
-C:/Users/kyong/workspace/cpp/card/build/_deps/sfml-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/kyong/workspace/cpp/card/build/_deps/sfml-subbuild/CMakeFiles/rebuild_cache.dir
