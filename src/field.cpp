@@ -3,6 +3,7 @@
 #include <game.hpp>
 #include <tilemap.hpp>
 #include <player.hpp>
+#include <portal.hpp>
 
 Field::Field() {
     tilemap = make_shared<TileMap>();
@@ -15,6 +16,9 @@ void Field::handleTick(shared_ptr<Game> game) {
 
 void Field::render(shared_ptr<Game> game) {
     tilemap->render(game);
+    for (int i = 0; i < connection.size(); i++) {
+        connection[i]->render(game);
+    }
     player->render(game);
 }
 
@@ -27,5 +31,11 @@ void Field::loadField(std::string place) {
             tmpData.push_back(e.tile[i][j]);
         }
         tilemap->data.push_back(tmpData);
+    }
+    connection = {};
+    for (int i = 0; i < e.connection.size(); i++) {
+        shared_ptr<Portal> portal = make_shared<Portal>();
+        portal->rect = {{e.connection[i].x, e.connection[i].y}, {40, 40}};
+        connection.push_back(portal);
     }
 }
