@@ -3,7 +3,6 @@
 #include <game.hpp>
 
 TileMap::TileMap() {
-    data = {{1, 1, 1, 1, 1}, {1, 2, 1, 2, 1}, {1, 1, 1, 1, 1}};
     sprite.setTexture(Img::texture->at("sprite_tile"));
 }
 

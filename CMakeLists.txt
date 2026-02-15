@@ -16,6 +16,7 @@ file(GLOB CODE src/*.cpp)
 
 # Copying data and assets.
 file(COPY "${CMAKE_SOURCE_DIR}/asset" DESTINATION "${CMAKE_BINARY_DIR}/bin")
+file(COPY "${CMAKE_SOURCE_DIR}/data" DESTINATION "${CMAKE_BINARY_DIR}/bin")
 
 # Compile
 add_compile_options("-w")

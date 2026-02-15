@@ -1,4 +1,5 @@
 #include <game.hpp>
+#include <datafield.hpp>
 #include <asset.hpp>
 #include <scene.hpp>
 #include <field.hpp>
@@ -6,9 +7,9 @@
 Game::Game() {
     sf::err().rdbuf(NULL);
     sf::VideoMode videoMode = sf::VideoMode::getDesktopMode();
-    if (videoMode.size.x > 2560) {
+    if (videoMode.size.x >= 2560) {
         width = 1600; height = 1200;
-    } else if (videoMode.size.x > 2000) {
+    } else if (videoMode.size.x >= 1920) {
         width = 1200; height = 900;
     } else {
         width = 800; height = 600;
@@ -16,6 +17,7 @@ Game::Game() {
     window = sf::RenderWindow(sf::VideoMode({width, height}), "Auto Card Battle");
     UIView = sf::View({400, 300}, {800, 600});
     window.setVerticalSyncEnabled(true);
+    //window.setFramerateLimit(60);
     clock = sf::Clock();
 }
 
@@ -28,9 +30,11 @@ void Game::run() {
     Font::neodgm->setSmooth(false);
     rText.setFont(*Font::neodgm);
     Img::loadImage();
+    DataField::loadData();
 
     scene = make_shared<SceneTitle>();
     field = make_shared<Field>();
+    field->loadField("home_town");
     loop();
 }
 
@@ -39,6 +43,7 @@ void Game::loop() {
         frameCurrent = (float)clock.getElapsedTime().asSeconds();
         delta = frameCurrent - framePrevious;
         framePrevious = frameCurrent;
+        //std::cout << delta << std::endl;
 
         handleInput();
         scene->update(self);
