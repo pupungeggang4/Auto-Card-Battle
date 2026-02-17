@@ -1,9 +1,9 @@
-#include <scene.hpp>
-#include <asset.hpp>
-#include <render.hpp>
-#include <ui.hpp>
-#include <util.hpp>
-#include <game.hpp>
+#include "scene.hpp"
+#include "asset.hpp"
+#include "render.hpp"
+#include "ui.hpp"
+#include "util.hpp"
+#include "game.hpp"
 
 SceneTitle::SceneTitle() {
     Render::setText(textTitle, *Font::neodgm, 32, sf::Color::Black, "Auto Card Battle", UI::UITitle["text_title"]);

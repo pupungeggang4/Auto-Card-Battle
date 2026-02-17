@@ -1,4 +1,4 @@
-#include <render.hpp>
+#include "render.hpp"
 
 void Render::setText(sf::Text& text, sf::Font& font, unsigned int size, sf::Color color, sf::String str, std::vector<float> pos) {
     text.setFont(font);

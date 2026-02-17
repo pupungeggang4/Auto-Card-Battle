@@ -1,6 +1,6 @@
-#include <portal.hpp>
-#include <asset.hpp>
-#include <game.hpp>
+#include "portal.hpp"
+#include "asset.hpp"
+#include "game.hpp"
 
 Portal::Portal() {
     sprite.setTexture(Img::texture->at("sprite_entity"));

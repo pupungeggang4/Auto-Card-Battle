@@ -1,6 +1,6 @@
-#include <includes.hpp>
-#include <game.hpp>
-#include <asset.hpp>
+#include "includes.hpp"
+#include "game.hpp"
+#include "asset.hpp"
 
 int main() {
     shared_ptr<Game> game = make_shared<Game>();

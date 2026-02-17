@@ -1,6 +1,6 @@
-#include <player.hpp>
-#include <asset.hpp>
-#include <game.hpp>
+#include "player.hpp"
+#include "asset.hpp"
+#include "game.hpp"
 
 Player::Player() {
     sprite.setTexture(Img::texture->at("sprite_player"));

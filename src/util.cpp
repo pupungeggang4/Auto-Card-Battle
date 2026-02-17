@@ -1,6 +1,6 @@
-#include <util.hpp>
-#include <game.hpp>
-#include <scene.hpp>
+#include "util.hpp"
+#include "game.hpp"
+#include "scene.hpp"
 
 void Util::changeScene(shared_ptr<Game> game, std::string scene) {
     if (scene == "title") {
